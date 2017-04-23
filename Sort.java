@@ -1,6 +1,6 @@
 public class Sort {
   
-  public void Bubble(LinkedList list)
+  public static void Bubble(LinkedList list)
   {
     //loop through the list
     for(int i = 0; i <= list.getSize(); i++)
@@ -25,9 +25,28 @@ public class Sort {
     
   }
   
-  public static void Main(String[] args)
+  public static void main(String[] args)
   {
     LinkedList numbers = new LinkedList();
+    
+    Node nHead = new Node(4);
+    
+    numbers.setHead(nHead);
+    numbers.add(1, 7);
+    numbers.add(2, 6);
+    numbers.add(3, 3);
+    numbers.add(4, 5);
+    numbers.add(5, 9);
+    numbers.add(6, 2);
+    numbers.add(7, 8);
+    numbers.add(8, 1);
+    numbers.add(9, 0);
+    
+    numbers.print();
+    
+    Bubble(numbers);
+    
+    numbers.print();
     
   }
 }
