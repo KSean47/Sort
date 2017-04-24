@@ -8,7 +8,7 @@ public class Sort {
       Node current = list.getHead();
       
       //iterate through list
-      while(current != null)
+      while(current.getNext() != null)
       {
         
         if(current.getData() > current.getNext().getData())
