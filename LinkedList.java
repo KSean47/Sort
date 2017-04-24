@@ -35,11 +35,11 @@ public class LinkedList
     }
     else 
     {
-      Node tmp = this.head;
-      while (tmp != null) 
+      Node current = this.head;
+      while (current != null) 
       {
-        tmp.print();
-        tmp = tmp.getNext();
+        current.print();
+        current = current.getNext();
       }
       System.out.println("");
     }
@@ -54,18 +54,15 @@ public class LinkedList
   {
     Node newNode = new Node(data);
     
-    if( index > this.size)
-      //error
+    if(index > this.size)
       System.out.println("Index " + index + " does not exist.");
     else 
     {
-      // if list is empty, newNode is head
       if (this.isEmpty()) 
       {
         this.head = newNode;
         this.tail = newNode;
       }
-      // adds to front of list
       else if (index == 0) 
       {
         newNode.setNext(head);
@@ -73,7 +70,6 @@ public class LinkedList
       }
       else if (index == this.size) 
       {
-        // adds to end of list
         Node current = this.head;
         while (current.getNext() != null) 
         {
@@ -84,7 +80,6 @@ public class LinkedList
       }
       else 
       {
-        // adds to middle of list
         Node current = this.head;
         for(int i = 0; i < index - 1; i++) 
         {
@@ -96,47 +91,5 @@ public class LinkedList
     this.size++;
     }
   }
-  
-  public void addNode(int index, Node newNode) { 
-    if( index > this.size)
-      //error
-      System.out.println("Index " + index + " does not exist.");
-    else {
-      // if list is empty, newNode is head
-      if (this.isEmpty()) {
-        this.head = newNode;
-        this.tail = newNode;
-      }
-      // adds to front of list
-      else if (index == 0) {
-        newNode.setNext(head);
-        this.head = newNode;
-      }
-      else if (index == this.size) {
-        // adds to end of list
-        Node current = this.head;
-        while (current.getNext() != null) {
-          current = current.getNext();
-        }
-        current.setNext(newNode);
-        this.tail = newNode;
-      }
-      else {
-        // adds to middle of list
-        Node current = this.head;
-        for(int i = 0; i < index - 1; i++) {
-          current = current.getNext();
-        }
-        newNode.setNext(current.getNext());
-        current.setNext(newNode);
-      }
-    this.size++;
-    }
-  }
-     
-  public void destroy() {
-    this.head = null;
-    this.tail = null;
-  }
-  
+
 }

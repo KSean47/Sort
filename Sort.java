@@ -2,12 +2,10 @@ public class Sort {
   
   public static void Bubble(LinkedList list)
   {
-    //loop through the list
     for(int i = 0; i <= list.getSize(); i++)
     {
       Node current = list.getHead();
       
-      //iterate through list
       while(current.getNext() != null)
       {
         
@@ -29,18 +27,30 @@ public class Sort {
   {
     LinkedList numbers = new LinkedList();
     
-    Node nHead = new Node(4);
+    int x1 = (int)(Math.random() * 10);
     
+    Node nHead = new Node(x1);
+    
+    int x2 = (int)(Math.random() * 10);
+    int x3 = (int)(Math.random() * 10);
+    int x4 = (int)(Math.random() * 10);
+    int x5 = (int)(Math.random() * 10);
+    int x6 = (int)(Math.random() * 10);
+    int x7 = (int)(Math.random() * 10);
+    int x8 = (int)(Math.random() * 10);
+    int x9 = (int)(Math.random() * 10);
+    int x10 = (int)(Math.random() * 10);
+
     numbers.setHead(nHead);
-    numbers.add(1, 7);
-    numbers.add(2, 6);
-    numbers.add(3, 3);
-    numbers.add(4, 5);
-    numbers.add(5, 9);
-    numbers.add(6, 2);
-    numbers.add(7, 8);
-    numbers.add(8, 1);
-    numbers.add(9, 0);
+    numbers.add(1, x2);
+    numbers.add(2, x3);
+    numbers.add(3, x4);
+    numbers.add(4, x5);
+    numbers.add(5, x6);
+    numbers.add(6, x7);
+    numbers.add(7, x8);
+    numbers.add(8, x9);
+    numbers.add(9, x10);
     
     numbers.print();
     
