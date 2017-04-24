@@ -13,10 +13,10 @@ public class Sort {
         
         if(current.getData() > current.getNext().getData())
         {
-          Node swap;
-          swap = current;
-          current = current.getNext();
-          current.setNext(swap);
+          int swap;
+          swap = current.getData();
+          current.setData(current.getNext().getData());
+          current.getNext().setData(swap);
          
         }
         current = current.getNext();
